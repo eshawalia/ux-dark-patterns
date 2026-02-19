@@ -1,0 +1,248 @@
+
+        body {
+            /*trust the system ui fonts that are the default font of the operation system 0*/
+            font-family: system-ui, sans-serif;
+            /*this creates distance between copy lines like in Google docs*/
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #191A1F;
+            color: white;
+        }
+
+        .nav-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1E222B;
+            padding: 30px 0;
+        }
+
+        nav a {
+            margin-right: 40px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            font-family: Gabarito;
+        }
+
+        nav a:hover {
+            color: #E90F89;
+        }
+
+        .container {
+            /*It's wide enough to accommodate complex layouts on desktop screens while not being so wide that it looks empty or sparse on larger monitors.*/
+            max-width: 1200px;
+            /*sets the top and bottom margins of an element to 0 and centers it horizontally within its parent element.*/
+            margin: 0 auto;
+            padding: 90px 20px 40px 20px;
+            display: flex;
+            flex-direction: column; 
+            align-items: flex-start;
+            gap: 128px;
+        }
+        .top-half {
+            /* This It creates a flex formatting context for its contents. Child elements become flex items.
+It allows for powerful alignment and distribution of space among items in a container, even when their size is unknown or dynamic.*/
+            display: flex;  
+            /* Evenly distributes the flex items along the main axis.
+The first item is flush with the start edge of the container, and the last item is flush with the end edge.
+All remaining space is evenly distributed between the items.*/
+            justify-content: space-between;
+        }
+        
+        .top-container {
+            /* notice this is as close to half giving a bit of space between copy and photo*/
+            width: 48%;
+            color: white;
+        }
+
+        .top-container p {
+            color: #FFF;
+            font-family: Fustat;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-bottom: 40px;
+        }
+        
+        #dark-patterns {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 48px;
+            align-self: stretch;
+        }
+        
+        .bottom-half {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            align-content: flex-start;
+            row-gap: 48px;
+            align-self: stretch;
+            flex-wrap: wrap;
+        }
+
+        
+        .bottom-card {
+            display: flex;
+            padding: 40px 29px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            border-radius: 60px;
+            border: 1px solid #35383F;
+            background: #1E222B;
+            width: 488px;
+        }
+
+        .bottom-card img { 
+            height: 160px;
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-self: stretch;
+        }
+        
+        .pattern-description {
+            color: #FFF;
+            text-align: center;
+            font-family: Fustat;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px;
+            height: 64px;
+        }
+
+        .descriptive-text p, ul, ol {
+            color: #FFF;
+            font-family: Fustat;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px;
+        }
+
+        .list-style {
+            font-weight: 800;
+            color: #E90F89;
+        }
+
+        img {
+            /*this translates to make the photo the size of the container and adjust the height accordingly*/
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .pattern-header {
+            margin: auto;
+            text-align: center;
+        }
+        
+        .pattern-header img {
+            height: 474px;
+
+        }
+        
+        .button {
+            display: flex;
+            width: 282px; 
+            height: 64px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 40px;
+            background: #6874E8;
+            
+            /* This is the button text styling */
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            font-family: Gabarito;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .button:hover {
+            background: #E90F89;
+        }
+
+        h1 {
+            color: #CEFF1A;
+            font-family: Gabarito;
+            font-size: 56px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 110%;
+        }
+
+        h2 {
+            color: #CEFF1A;
+            font-family: Gabarito;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 110%;
+        }
+
+        h3 {
+            align-self: stretch;
+            color: #CEFF1A;
+            text-align: center;
+            font-family: Gabarito;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 110%;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #1E222B;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            font-family: Gabarito;
+        }
+
+
+        /*this collapses everything to one column at 768px*/
+        @media screen and (max-width: 768px) {
+            .top-container,
+            .bottom-container {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .top-half,
+            #bottom-half {
+                flex-direction: column;
+            }
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                margin: 5px 0;
+            }
+        }
